@@ -1,39 +1,29 @@
 require 'board.rb'
+require 'zombie.rb'
 
 class ZombieApp
 
   def self.call(board_size, zombie_start, poor_creatures, moves)
-    # @board_size = board_size.to_i #
-    # @zombie_start = zombie_start
-    # @poor_creatures = poor_creatures.split # convert multiple locations to array
-    # @moves = moves 
+    # init zombie object
+    zombie = Zombie.new(zombie_start)
 
-    # p @board_size
-    # p @zombie_start
-    # p @poor_creatures
-    # p @moves
+    # p zombie.location
+    #init creature object
+    @poor_creatures = poor_creatures.split # convert multiple locations to array
+    creatures = @poor_creatures.each {|xy| xy.split(',').map(&:to_i)}
 
     # init the board object
-    board = Board.new(board_size, zombie_start, poor_creatures, moves)
+    board = Board.new(board_size, zombie.location, poor_creatures, moves)
 
     # setup the board
-    @zombie_board = board.init_board
-    # @zombie_board = Array.new(@board_size, ".").map{|row| Array.new(@board_size, ".")}
+    board.init_board
 
-    puts @zombie_board.class
+    # make the moves
+    # while there are zombies in array && there are moves left
+    # board.move(zombie)
 
-    row_label = ["0", "1", "2", "3"]
-    column_label = ["0", "1", "2", "3"]
-    print "\t"
-    print row_label.join("\t")
-    puts
-    @zombie_board.each_with_index do |row, i|
-      print column_label[i]
-      print "\t"
-      print row.join("\t")
-      puts
-    end
-    
+    # print board
+    board
   end
 
 end

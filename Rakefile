@@ -13,8 +13,10 @@ task "run" do
   
   board_size, zombie_start, poor_creatures, moves = f
 
-  ZombieApp.call(board_size, zombie_start, poor_creatures, moves)
+  zombie_board = ZombieApp.call(board_size, zombie_start, poor_creatures, moves)
 
+  # print board
+  zombie_board.print_board
 end
 
 task :test do
