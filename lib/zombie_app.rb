@@ -21,9 +21,10 @@ class ZombieApp
     board = Board.new(board_size, zombie, poor_creatures, moves)
 
     # setup the board
-    zombie_board = board.init_board
+    # zombie_board = board.init_board
+    p board
 
-    new_game = Game.new(zombie, zombie_board, moves, zombie_start)
+    new_game = Game.new(zombie, board, moves, zombie_start)
 
     score = new_game.start()
 

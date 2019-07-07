@@ -1,4 +1,5 @@
 class Board
+  attr_accessor :board_size
   def initialize(board_size, zombie, poor_creatures, moves)
     @board_size = board_size.to_i 
     @zombie = zombie
@@ -10,6 +11,7 @@ class Board
 
   def init_board
     # setup board
+    #change cname to set_board
     @zombie_board = Array.new(@board_size, ".").map{|row| Array.new(@board_size, ".")}
     
     # setup start zombie start location && creatures
