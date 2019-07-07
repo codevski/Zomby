@@ -1,13 +1,8 @@
 class Creature
-  def initialize(creature_start)
-    @creature_start = creature_start
+  def initialize(creature_start_x, creature_start_y)
+    @creature_start_x = creature_start_x
+    @creature_start_y = creature_start_y
   end
 
-  def location
-    @creature_start_x, @creature_start_y = @creature_start.split(",").map(&:to_i)
-  end
-
-  def avatar
-    return "C"
-  end
+  # extensibility 
 end

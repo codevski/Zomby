@@ -24,10 +24,6 @@ class Zombie
     @zombie_moves
   end
 
-  def avatar
-    return "Z"
-  end
-
   def points
     @total_points
   end
