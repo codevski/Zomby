@@ -18,5 +18,5 @@ task "run" do
 end
 
 task :test do
-  ruby "test/unittest.rb"
+  ruby "spec/*.rb"
 end
