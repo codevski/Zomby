@@ -17,20 +17,21 @@ class Game
       while @zombies.size > 0
         # p @zombies[0]
         @zombie = @zombies[0]
-        p "Z-1"
-        p @zombies
+        # p "Z-1"
+        # p @zombies
         zombie_move(@zombie, @board)
         # p board
-        p "Z-2"
-        p @zombies
+        # p "Z-2"
+        # p @zombies
         @zombies = @zombies.drop(1)
-        p "Z-3"
-        p @zombies
+        # p "Z-3"
+        # p @zombies
       end
   
-      p "WHAT IS LOCATION"
-      p @zombie.location
+      # p "WHAT IS LOCATION"
+      # p @zombies.start
   
+     
       @total_zombies
       # current location
       # row = @zombie_board.detect{|aa| aa.include?(@zombie)}
