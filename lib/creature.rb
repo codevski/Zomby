@@ -5,4 +5,7 @@ class Creature
   end
 
   # extensibility 
+  def location
+    [@creature_start_x, @creature_start_y]
+  end
 end
