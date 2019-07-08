@@ -1,10 +1,9 @@
 class Game
   def initialize(zombie, creatures, input_moves, board_size)
-    @zombie = zombie
-    @input_moves = input_moves
-    @creatures = creatures
-    # @zombie_start = zombie_start
-    @board_size = board_size.to_i 
+    @zombie       = zombie
+    @input_moves  = input_moves
+    @creatures    = creatures
+    @board_size   = board_size.to_i 
     @total_points = 0
   end
 
@@ -28,8 +27,10 @@ class Game
     # initialise the board setup
     @zombie_board = setup_board()
 
-    # start the zombie game with given zombie
+    # create zombie queue to track which zombie is next
     @zombies = [@zombie]
+
+    # keep record of all zombies
     @total_zombies = [@zombie]
     
     # while there are zombies in array && there are moves left

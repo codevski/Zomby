@@ -8,23 +8,4 @@ class Board
     @poor_creatures = poor_creatures.split # convert multiple locations to array
     @moves = moves 
   end
-
-  # def set_board
-  #   # setup board
-  #   #change cname to set_board
-  #   @zombie_board = Array.new(@board_size, ".").map{|row| Array.new(@board_size, ".")}
-    
-  #   # Set Zombie Location
-  #   @zombie_board[@zombie_start_x][@zombie_start_y] = @zombie
-
-  #   # Place Creatures on Board
-  #   @poor_creatures.each do |creature|
-  #     creature_start_x, creature_start_y = creature.split(",").map(&:to_i)
-  #     @zombie_board[creature_start_x][creature_start_y] = Creature.new(creature_start_x, creature_start_y)
-  #   end
-    
-  #   @zombie_board
-  # end
-
-  
 end

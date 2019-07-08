@@ -8,6 +8,4 @@ RSpec.describe Board do
     board = Board.new(4, zombie, "creature", "moves")
     expect(board).to be_kind_of(Board)
   end
-
-
 end

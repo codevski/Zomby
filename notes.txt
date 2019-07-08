@@ -1,1 +1,0 @@
-zombies as a zombie object that will hold points? extensibility?

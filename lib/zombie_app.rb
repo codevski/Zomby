@@ -15,9 +15,6 @@ class ZombieApp
     #init creature object
     creatures = poor_creatures.split # convert multiple locations to array
 
-    # init the board object
-    # board = Board.new(board_size, zombie, poor_creatures, input_moves)
-
     # Create and Start Game
     new_game = Game.new(zombie, creatures, input_moves, board_size)
     

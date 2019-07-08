@@ -10,11 +10,7 @@ module Helper
 
   # Check if a creature is here
   def creature_here?(zombie, board)
-    if board[zombie.location_x][(zombie.location_y)].instance_of?(Creature)
-      true
-    else
-      false
-    end
+    board[zombie.location_x][(zombie.location_y)].instance_of?(Creature) ? true : false
   end
 
   # Validate that zombie is made and add point
@@ -44,9 +40,7 @@ module Helper
         p "Please check file for valid moves use U,D.L,R"
         exit()
       end
-      if creature_here?(zombie, board)
-        validate_point(zombie, board)
-      end
+      creature_here?(zombie, board) ? validate_point(zombie, board) : false
       zombie.zombie_moves = zombie.zombie_moves.drop(1)
     end
   end
