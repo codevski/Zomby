@@ -8,23 +8,16 @@ include Helper
 
 class ZombieApp
 
-  def self.call(board_size, zombie_start, poor_creatures, moves)
+  def self.call(board_size, zombie_start, poor_creatures, input_moves)
     # init zombie object
-    zombie = Zombie.new(zombie_start, moves.upcase)
+    zombie = Zombie.new(zombie_start, input_moves.upcase)
 
     #init creature object
-    @poor_creatures = poor_creatures.split # convert multiple locations to array
-    creatures = @poor_creatures.each {|xy| xy.split(',').map(&:to_i)}
-
-    # init the board object
-    board = Board.new(board_size, zombie, poor_creatures, moves)
+    creatures = poor_creatures.split # convert multiple locations to array
 
     # Create and Start Game
-    new_game = Game.new(zombie, board, moves, zombie_start)
-    score = new_game.start()
-
-    # print score
-    board.print_board(score)
+    new_game = Game.new(zombie, creatures, input_moves, board_size)
+    
+    new_game.start()    
   end
-
 end

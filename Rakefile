@@ -13,8 +13,14 @@ task "run" do
   
   board_size, zombie_start, poor_creatures, moves = f
 
-  zombie_board = ZombieApp.call(board_size, zombie_start, poor_creatures, moves)
+  zombie_app = ZombieApp.call(board_size, zombie_start, poor_creatures, moves)
 
+  # Print Results
+  puts "Game Over"
+  puts "Zombie Score: #{zombie_app.map(&:points).sum}"
+  print "Zombie Positions: "
+  zombie_app.each{|item| print item.location }
+  puts " "
 end
 
 task :test do

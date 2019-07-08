@@ -45,7 +45,6 @@
 - __Load Data from File:__ Loading board layout from txt file
 - __Movements & Points System:__ Set movements in your file and see if you can set a high record!
 - __RSpec:__ Using RSpec for unit testing
-- __OO Modeling:__ Using OO approach to create a `OO` solution
 
 ## Install
 Before you begin; install the dependencies by running `bundle`.
