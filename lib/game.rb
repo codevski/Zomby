@@ -9,11 +9,10 @@ class Game
   end
 
   def setup_board
-    # setup board
-    #change cname to set_board
+    # Setting up the N X N board
     zombie_board = Array.new(@board_size, ".").map{|row| Array.new(@board_size, ".")}
     
-    # Set Zombie Location
+    # Place Zombie on Board
     zombie_board[@zombie.location_x][@zombie.location_y] = @zombie
 
     # Place Creatures on Board
@@ -37,7 +36,7 @@ class Game
     while @zombies.size > 0
       zombie_move(@zombies.first, @zombie_board, @board_size)
 
-      # Completed all moves. Move onto the next zombie
+      # Once all moves completed. Move onto the next zombie
       @zombies = @zombies.drop(1)
     end
     

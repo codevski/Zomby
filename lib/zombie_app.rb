@@ -14,7 +14,6 @@ class ZombieApp
 
     #init creature object
     creatures = poor_creatures.split # convert multiple locations to array
-    # creatures = @poor_creatures.each {|xy| xy.split(',').map(&:to_i)}
 
     # init the board object
     # board = Board.new(board_size, zombie, poor_creatures, input_moves)
@@ -22,11 +21,6 @@ class ZombieApp
     # Create and Start Game
     new_game = Game.new(zombie, creatures, input_moves, board_size)
     
-    new_game.start()
-
-    # print score
-    # board.print_board(score)
-    
+    new_game.start()    
   end
-
 end
